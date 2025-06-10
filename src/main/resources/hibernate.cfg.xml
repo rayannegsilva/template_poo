@@ -1,0 +1,25 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Dialeto para MySQL 8+ -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+        <!-- Driver JDBC -->
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+        <!-- URL de conexão -->
+        <property name="hibernate.connection.url">
+        <!--  INFORME A URL DO BD AQUI-->
+        </property>
+        <property name="hibernate.connection.username"><!--  INFORME SEU USUARIO AQUI --></property>
+        <property name="hibernate.connection.password"><!--  INFORME A SENHA AQUI --> </property>
+
+        <!-- Geração automática de esquema (opcional) -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Mapeamentos aqui-->
+
+
+    </session-factory>
+</hibernate-configuration>
