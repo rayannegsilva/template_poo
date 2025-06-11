@@ -1,24 +1,19 @@
 package com.rayannegsilva.util;
 
+import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
-import org.hibernate.SessionFactory;
+import jakarta.persistence.Persistence;
 
 public class JPAUtil {
-    private static final String PERSISTENCE_UNIT_NAME = "";
-    private static final EntityManagerFactory EMF = buildEntityManagerFactory();
+    private static final String PERSISTENCE_UNIT_NAME = "aulabd";
+    private static final EntityManagerFactory EMF = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
 
-    private static EntityManagerFactory buildEntityManagerFactory() {
-
-        // TODO: construir o EntityManagerFactory
-        return null;
-    }
-
-    public static EntityManagerFactory getEntityManagerFactory() {
-        return EMF;
+    public static EntityManager getEntityManagerFactory() {
+        return EMF.createEntityManager();
     }
 
     public static void shutdown() {
-        if (EMF != null && EMF.isOpen()) {
+        if (EMF.isOpen()) {
             EMF.close();
         }
     }
