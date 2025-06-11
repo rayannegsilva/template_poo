@@ -6,7 +6,7 @@ import com.rayannegsilva.repository.UserRepositoryImpl;
 
 import java.util.List;
 
-// TODO: Adicione mais métodos
+// TODO: Implemente os métodos adicionados na interface.
 public class UserServiceImpl implements UserService {
     private final UserRepository repo = new UserRepositoryImpl();
 

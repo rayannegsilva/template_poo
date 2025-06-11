@@ -8,7 +8,7 @@ import jakarta.persistence.EntityTransaction;
 import java.util.List;
 
 
-// TODO: Implemente os métodos adicionados.
+// TODO: Implemente os métodos adicionados na interface.
 public class UserRepositoryImpl implements  UserRepository {
     private final EntityManager em = JPAUtil.getEntityManagerFactory();
 
